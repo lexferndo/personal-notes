@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    background-color:darkslategrey
+}
+
+input, textarea{
+    background-color: transparent;
+    font-family: 'Assistant', sans-serif;
+    color: #fff;
+    padding: 12px;
+    width: 50%;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #fff;
+    font-weight: 400;
+    font-size: medium;
+    letter-spacing: 1px;
+}
+
+button{
+    padding: 10px 25px;
+    background-color: transparent;
+    font-family: 'Assistant', sans-serif;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 500;
+    display: block;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color:cadetblue;
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition-delay: 0.1s;
+}
+
+.note-app_header{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 4px 16px;
+    border-bottom: 2px solid #fff;
+}
+
+.note-app_header h1{
+    flex: 1;
+    font-weight: 500;
+    margin: 10px auto;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.note-search{
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.notes-app_body{
+    max-width: 1000px;
+    margin: 16px auto;
+    padding: 15px;
+}
+
+.notes-input{
+    display: grid;
+    gap: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.notes-input h2{
+    color: white;
+    font-weight: 500;
+}
+
+.notes-input p{
+    color: white;
+    margin-bottom: 10px;
+    text-align: right;
+    opacity: 70%;
+}
+
+.notes-input_title, .notes-input_body{
+    width: 100%;
+    display: block;
+}
+
+.notes-input_title::placeholder{
+    font-size: medium;
+    letter-spacing: 2px;
+}
+
+.notes-input_body{
+    min-height: 175px;
+}
+
+.notes-input_body::placeholder{
+    font-size: medium;
+    letter-spacing: 2px;
+}
+
+.notes-input button{
+    width: 100%;
+}
+
+.title-notes-list{
+    padding: 10px 40px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.notes-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 10px 40px;
+    margin-bottom: 28px;
+}
+
+.notes-list_empty{
+  text-align: center;
+  color: #fff;
+  font-size: large;
+}
+
+.notes-item{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    row-gap: 10px;
+    overflow: hidden;
+}
+
+.notes-item_content{
+    flex: 1;
+    padding: 10px;
+}
+
+.notes-item_title{
+    color: #fff;
+    font-size: 20px;
+}
+
+.notes-item_date{
+    color: #fff;
+    font-weight: 100;
+    opacity: 70%;
+    padding-bottom: 10px;
+    font-size: small;
+}
+
+.notes-item_body{
+    color: #fff;
+    text-align: justify;
+    font-weight: 200;
+}
+
+.note-item_action{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #fff;
+}
+
+.note-item_delete-button, .note-item_archive-button{
+    background: transparent;
+    border: none;
+    width: 100%;
+    font-family: 'Assistant', sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    padding: 10px 30px;
+    border-radius: 0px;
+}
+
+.note-item_delete-button{
+    color: red;
+    opacity: 70%;
+    border-right: 1px solid #fff;
+}
+
+.note-item_archive-button{
+    color: gold;
+    opacity: 70%;
+}
+
+.note-item_delete-button:hover{
+    color: red;
+    font-weight: 500;
+    opacity: 100%;
+    background: transparent;
+}
+
+.note-item_archive-button:hover{
+    color: gold;
+    font-weight: 500;
+    opacity: 100%;
+    background: transparent;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* 
+      Device = Tablets, Ipads (portrait)
+      Screen = 768px to 1024px
+    */
+    .notes-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    /* 
+      Device = Most of the Smartphones Mobiles (Portrait)
+      Screen = 320px to 479px
+    */
+    .note-search input{
+        font-size: smaller;
+    }
+
+    .notes-list {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+
